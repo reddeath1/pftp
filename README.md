@@ -6,7 +6,7 @@ First include this library to your existing project.
 
 require 'pft.php'
 
-How to use it
+# How to use it
 To you use this you must make a call to this library like calling other classes.
 
 $_server = '192.168.1.1.4'
@@ -15,7 +15,7 @@ $_password = 'password'
 
 $pftp = new pftp($_server,$_user,$_password);
 
-How to use it's methods 
+# How to use it's methods 
 
 There are plent of methods that you can use. e.g
 creating a directory to the server
