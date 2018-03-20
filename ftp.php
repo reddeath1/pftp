@@ -7,14 +7,14 @@
  * Time: 3:04 PM
  */
 
-class ftp
+class pftp
 {
     public $conn;
     private $server;
 
-    public function __construct()
+    public function __construct($_server,$_user,$_pass)
     {
-       if(!$this->connect()){
+       if(!$this->connect($_server,$_user,$_pass)){
            die('Connection failed to the server:' .$this->server);
        }
     }
@@ -23,19 +23,15 @@ class ftp
      * make connection to the server
      * @return bool
      */
-    private function connect(){
+    private function connect($_server,$_user,$_pass){
         $connected = false;
         $login = false;
         set_time_limit(0);
-        /**
-         * host : ftp.nevaa.co
-         * user : d4d3t9f4
-         * pass : Hiddenroute
-         */
+       
 
-        define('FTP_SERVER','192.168.42.200');
-        define('FTP_USER','reddeath');
-        define('FTP_PASSWORD','Hiddenroute1');
+        define('FTP_SERVER',$_server);
+        define('FTP_USER',$_user);
+        define('FTP_PASSWORD',$_pass);
         define('FTP_PASSIVE',FALSE);
         define('FTP_PORT',21);
         define('FTP_TIME_OUT',90);
