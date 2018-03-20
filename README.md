@@ -9,9 +9,11 @@ require 'pft.php'
 # How to use it
 To you use this you must make a call to this library like calling other classes.
 
-$_server = '192.168.1.1.4'
-$_user = 'root'
-$_password = 'password'
+$_server = '192.168.1.1.4';
+
+$_user = 'root';
+
+$_password = 'password';
 
 $pftp = new pftp($_server,$_user,$_password);
 
@@ -20,7 +22,7 @@ $pftp = new pftp($_server,$_user,$_password);
 There are plent of methods that you can use. e.g
 creating a directory to the server
 
-$pftp->mkdir('Test')
+$pftp->mkdir('Test');
 
 Changing directory
 
